@@ -58,5 +58,6 @@ document.addEventListener("DOMContentLoaded", async function() {
         pokemonInfo.appendChild(name);
         pokemonInfo.appendChild(document.createElement("br"));
         pokemonInfo.appendChild(types);
+        pokemonInfo.appendChild(document.createElement("br"));
     }
 });

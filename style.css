@@ -1,9 +1,6 @@
 .menu {
     background-color: rgba(128, 128, 128, 0.471);
 }
-.left{
-    /* margin-right: 5px; */
-}
 a:visited {
     color: white;
   }
@@ -16,4 +13,7 @@ a:visited {
   /* selected link */
   a:active {
     color: blue;
+  }
+  #pokemon-info{
+    float: right;
   }
