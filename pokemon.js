@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function() {
-    const response = await fetch("data.json"); 
+    const response = await fetch("pokemondata.json"); 
     const data = await response.json();
 
     const pokemonList = document.getElementById("pokemon-list");
