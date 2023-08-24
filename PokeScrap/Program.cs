@@ -13,7 +13,7 @@ public class Program
     {
         var l = await SlowWay();
         string data = JsonSerializer.Serialize(l);
-        File.WriteAllText("../data.json", data);
+        File.WriteAllText("../pokemondata.json", data);
     }
 
     private static async Task<List<Generation>> SlowWay()
