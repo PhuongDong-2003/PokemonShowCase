@@ -1,0 +1,19 @@
+.menu {
+    background-color: rgba(128, 128, 128, 0.471);
+}
+.left{
+    /* margin-right: 5px; */
+}
+a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: red;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
