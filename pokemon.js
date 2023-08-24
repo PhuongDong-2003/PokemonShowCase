@@ -42,16 +42,22 @@ document.addEventListener("DOMContentLoaded", async function() {
         const sprite = document.createElement("img");
         sprite.src = pokemon.Sprite;
         sprite.classList.add("img-fluid");
+        sprite.style.width="100%";
+        sprite.style.height="5%";
 
         const name = document.createElement("span");
         name.textContent = `Name: ${pokemon.Name}`;
         name.style.fontSize = "15px";
         name.style.fontStyle = "Times New Roman";
+        name.style.marginLeft = "50px";
+        name.style.marginTop = "0px";
 
         const types = document.createElement("span");
         types.textContent = `Types: ${pokemon.Types.join(", ")}`;
         types.style.fontSize = "15px";
         types.style.fontStyle = "Times New Roman";
+        types.style.marginLeft = "50px";
+        types.style.marginTop = "0px";
 
         pokemonInfo.appendChild(sprite);
         pokemonInfo.appendChild(document.createElement("br"));
