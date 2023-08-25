@@ -28,8 +28,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             sprite.addEventListener("click", function () {
                 clearSelectedElements();
                 sprite.classList.add("selected-pokemon");
-                name.classList.add("selected-element");
-                types.classList.add("selected-element");
                 displayPokemonInfo(pokemon);
             });
 
@@ -39,24 +37,13 @@ document.addEventListener("DOMContentLoaded", async function () {
             name.style.fontStyle = "Times New Roman";
             name.style.fontWeight = "bold";
             name.style.color = "#2769be";
-            name.addEventListener("click", function () {
-                clearSelectedElements();
-                sprite.classList.add("selected-pokemon");
-                name.classList.add("selected-element");
-                types.classList.add("selected-element");
-            });
+
 
             const types = document.createElement("span");
             types.textContent = `Types: ${pokemon.Types.join(", ")}`;
             types.style.fontSize = "15px";
             types.style.fontStyle = "Times New Roman";
             types.style.color = "#88447a";
-            types.addEventListener("click", function () {
-                clearSelectedElements();
-                sprite.classList.add("selected-pokemon");
-                name.classList.add("selected-element");
-                types.classList.add("selected-element");
-            });
 
             pokemonContainer.appendChild(sprite);
             pokemonContainer.appendChild(document.createElement("br"));
@@ -93,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         sprite.src = pokemon.Sprite;
         sprite.classList.add("img-fluid");
         sprite.style.width = "100%";
-        sprite.style.height = "5%";
+        sprite.style.height = "15%";
 
         const name = document.createElement("span");
         name.textContent = `Name: ${pokemon.Name}`;
@@ -120,10 +107,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         const moveList = document.createElement("div");
         moveList.style.maxHeight = "150px"; // Đặt chiều cao tối đa cho khung cuộn
         moveList.style.overflowY = "auto"; // Bật thanh cuộn khi danh sách dài
-        moveList.style.marginLeft = "25%";
+        moveList.style.marginLeft = "35%";
+        moveList.style.marginTop = "20px"
 
         movearray.forEach(moveName => {
-            const moveItem = document.createElement("div");
+            const moveItem = document.createElement("ul");
             moveItem.textContent = moveName;
             moveList.appendChild(moveItem);
         });
