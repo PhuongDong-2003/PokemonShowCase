@@ -16,4 +16,14 @@ a:visited {
   }
   #pokemon-info{
     float: right;
+    margin: 20%;
+    
   }
+  .selected-pokemon {
+    border: 2px solid blue; /* Màu khung bao, bạn có thể thay đổi màu sắc tùy ý */
+    border-radius: 5px; /* Độ cong góc của khung bao */
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
