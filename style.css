@@ -16,7 +16,6 @@ a:visited {
   }
   #pokemon-info{
     float: right;
-    margin: 20%;
     
   }
   .selected-pokemon {
@@ -26,4 +25,11 @@ a:visited {
 ul {
   list-style-type: none;
   padding: 0;
+}
+.enlarge-image {
+  transition: transform 0.3s ease;
+}
+
+.enlarge-image:hover {
+  transform: scale(1.3); /* Phóng to ảnh khi hover */
 }

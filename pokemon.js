@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             const sprite = document.createElement("img");
             sprite.style.width = "80%";
             sprite.src = pokemon.Sprite;
-            sprite.classList.add("img-fluid");
+            sprite.classList.add("img-fluid", "enlarge-image");
             sprite.addEventListener("click", function () {
                 clearSelectedElements();
                 sprite.classList.add("selected-pokemon");
@@ -56,8 +56,6 @@ document.addEventListener("DOMContentLoaded", async function () {
                 sprite.classList.add("selected-pokemon");
                 name.classList.add("selected-element");
                 types.classList.add("selected-element");
-
-
             });
 
             pokemonContainer.appendChild(sprite);
