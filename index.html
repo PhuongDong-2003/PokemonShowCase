@@ -6,50 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="assets/css/style.bundle.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon"  href="img/logo.png">
     <title>Pokemon</title>
 </head>
 
 <body>
+  
     <div class="">
-        
+
         <div class="text-center bg-secondary bg-lighten-xl">
             <img src="img/header-lg.avif" class="rounded" alt="...">
         </div>
+        <div id="border" style="border: 1px solid  rgb(94, 164, 202); border-radius: 5px;">
 
-        <div class="menu d-flex justify-content-center">
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">| Gen 1</a>
+        <div class="card-rounded bg-light d-flex flex-stack flex-wrap p-5">
+            <!--begin::Nav-->
+            <ul class="nav flex-wrap border-transparent fw-bold">
+                <!--begin::Nav item-->
+                <li class="nav-item my-1">
+                    <a class=" nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase active">Gen 1</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">| Gen 2</a>
+                <!--end::Nav item-->
+                <!--begin::Nav item-->
+                <li class="nav-item my-1">
+                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase">Gen 2</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">| Gen 3</a>
+                <!--end::Nav item-->
+                <!--begin::Nav item-->
+                <li class="nav-item my-1">
+                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 3</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">| Gen 4</a>
+                <!--end::Nav item-->
+                <!--begin::Nav item-->
+                <li class="nav-item my-1">
+                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 4</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">| Gen 5</a>
+                <!--end::Nav item-->
+                <!--begin::Nav item-->
+                <li class="nav-item my-1">
+                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 5</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">| Gen 6</a>
+                <!--end::Nav item-->
+                <!--begin::Nav item-->
+                <li class="nav-item my-1">
+                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 6</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">| Gen 7</a>
+                <!--end::Nav item-->
+                                <!--end::Nav item-->
+                <!--begin::Nav item-->
+                <li class="nav-item my-1">
+                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 7</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">| Gen 8</a>
+                <!--end::Nav item-->
+                                <!--end::Nav item-->
+                <!--begin::Nav item-->
+                <li class="nav-item my-1">
+                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 8</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">| Gen 9</a>
+                <!--end::Nav item-->
+                                <!--end::Nav item-->
+                <!--begin::Nav item-->
+                <li class="nav-item my-1">
+                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 9</a>
                 </li>
-            </ul>
+                <!--end::Nav item-->
         </div>
         <div class="row">
             <div class="left col-sm-8 bg-brown bg-lighten-xl " id="pokemonarray">
@@ -58,32 +80,26 @@
                 </div>
 
             </div>
-            <div class="col-sm-4 d-flex justify-content-start"  >
-                
-                <div  id="pokemon-info" >
+
+            <div class="col-sm-4 d-flex justify-content-start" id="pokemondisplay">
+
+                <div id="pokemon-info">
 
                 </div>
                 <hr>
 
             </div>
+
         </div>
-        
-      
+        </div>
 
     </div>
+    
 
     <script src="pokemon.js"></script>
+    <script src="assets/js/scripts.bundle.js"></script>
+    <script src="assets/js/widgets.bundle.js"></script>
 
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,19 +1,4 @@
-.menu {
-    background-color: rgba(128, 128, 128, 0.471);
-}
-a:visited {
-    color: white;
-  }
-  
-  /* mouse over link */
-a:hover {
-    color: red;
-  }
-  
-  /* selected link */
-a:active {
-  color: blue;
-  }
+
 #pokemonarray{
   height: 1800px; /* Đặt kích thước của phần tử cha */
   overflow: auto; /* Hiển thị thanh cuộn khi cần thiết */
@@ -36,4 +21,7 @@ ul {
 
 .enlarge-image:hover {
   transform: scale(1.2); /* Phóng to ảnh khi hover */
+}
+#border{
+  border: 2px solid rgb(94, 136, 158);
 }

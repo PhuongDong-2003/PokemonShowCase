@@ -16,51 +16,40 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
 
     function displayGenerationPokemon(pokemons) {
-            pokemonList.innerHTML = ""; // Xóa thông tin cũ
-            pokemons.forEach(pokemon => {
-            const pokemonContainer = document.createElement("div");
-            pokemonContainer.classList.add("content", "col-md-2", "text-center", "shadow-lg", "p-3", "mb-5", "rounded");
-
-            const sprite = document.createElement("img");
-            sprite.style.width = "80%";
-            sprite.src = pokemon.Sprite;
-            sprite.classList.add("img-fluid", "enlarge-image");
-            sprite.addEventListener("click", function () {
-                clearSelectedElements();
-                sprite.classList.add("selected-pokemon");
+        pokemonList.innerHTML = ""; // Xóa thông tin cũ
+        pokemons.forEach(pokemon => {
+            let htmlPkm = `
+                <a id="pokemon-${pokemon.Id}" class="m-3 nav-link btn btn-outline btn-flex btn-color-muted flex-column overflow-hidden w-100px h-110px pt-5 active" data-bs-toggle="pill" aria-selected="true" role="tab">
+                    <span class="nav-text text-gray-800 fw-bold fs-6 lh-1">${pokemon.Name}</span>
+                    <img src="${pokemon.Sprite}" id="pokemon-image-${pokemon.Id}" />
+                    <span class="bullet-custom position-relative  bottom-0 w-100 h-4px bg-primary "></span>
+                </a>
+            `;
+          
+           
+            const pokemonElement = document.createElement("div");
+            pokemonElement.classList.add("content", "col-md-2", "text-center",  "p-3", "mb-5", "rounded");
+            pokemonElement.innerHTML += htmlPkm;
+            const pokemonLink = pokemonElement.querySelector(`#pokemon-${pokemon.Id}`);
+    
+            // Thêm sự kiện click cho mỗi Pokemon để hiển thị thông tin chi tiết
+            pokemonLink.addEventListener("click", function () {
+                clearSelectedElements(); // Xóa lựa chọn trước đó
                 displayPokemonInfo(pokemon);
+                this.classList.add("selected-element");
             });
-
-            const name = document.createElement("span");
-            name.textContent = `Name: ${pokemon.Name}`;
-            name.style.fontSize = "15px";
-            name.style.fontStyle = "Times New Roman";
-            name.style.fontWeight = "bold";
-            name.style.color = "#2769be";
-
-
-            const types = document.createElement("span");
-            types.textContent = `Types: ${pokemon.Types.join(", ")}`;
-            types.style.fontSize = "15px";
-            types.style.fontStyle = "Times New Roman";
-            types.style.color = "#88447a";
-
-            pokemonContainer.appendChild(sprite);
-            pokemonContainer.appendChild(document.createElement("br"));
-            pokemonContainer.appendChild(name);
-            pokemonContainer.appendChild(document.createElement("br"));
-            pokemonContainer.appendChild(types);
-            pokemonContainer.appendChild(document.createElement("br"));
-            pokemonList.appendChild(pokemonContainer);
+    
+            pokemonList.appendChild(pokemonElement);
         });
     }
+    
 
     function clearSelectedElements() {
         const activeElements = document.querySelectorAll(".selected-element");
         activeElements.forEach(activeElement => {
             activeElement.classList.remove("selected-element");
         });
-    
+
         const activeSprites = document.querySelectorAll(".selected-pokemon");
         activeSprites.forEach(activeSprite => {
             activeSprite.classList.remove("selected-pokemon");
@@ -108,13 +97,32 @@ document.addEventListener("DOMContentLoaded", async function () {
         moveList.style.maxHeight = "150px"; // Đặt chiều cao tối đa cho khung cuộn
         moveList.style.overflowY = "auto"; // Bật thanh cuộn khi danh sách dài
         moveList.style.marginLeft = "35%";
-        moveList.style.marginTop = "20px"
-
+        moveList.style.marginTop = "5px"
+      
         movearray.forEach(moveName => {
-            const moveItem = document.createElement("ul");
-            moveItem.textContent = moveName;
-            moveList.appendChild(moveItem);
+            let htmlmoves= `<div class="card card-flush h-md-100 ">      
+         
+            <div class="card-body p-0">
+           
+                <div class="table-responsive ">
+             
+                    <table class="table table-row-dashed align-middle gs-0 my-0">
+                        <tbody>
+                            <tr>
+                                <td class="ps-0 ml-200px">
+                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6  pe-0 d-flex align-items-center justify-content-center">${moveName}</a>
+                                </td>
+                              
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              
+            </div>
+        </div>`;
+        moveList.insertAdjacentHTML('beforeend', htmlmoves);
         });
+       
 
 
         pokemonInfo.appendChild(sprite);
