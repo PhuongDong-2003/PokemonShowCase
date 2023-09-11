@@ -14,42 +14,43 @@ document.addEventListener("DOMContentLoaded", async function () {
             displayGenerationPokemon(data[index].Pokemons);
         });
     });
-
+    
     function displayGenerationPokemon(pokemons) {
         pokemonList.innerHTML = ""; // Xóa thông tin cũ
         pokemons.forEach(pokemon => {
             let htmlPkm = `
-                <a id="pokemon-${pokemon.Id}" class="m-3 nav-link btn btn-outline btn-flex btn-color-muted flex-column overflow-hidden w-100px h-110px pt-5 active" data-bs-toggle="pill" aria-selected="true" role="tab">
+                <a id="pokemon-${pokemon.Id}" class="m-3 nav-link btn btn-outline btn-flex btn-color-muted flex-column overflow-hidden w-100px h-110px pt-5 active border-hover-primary" data-bs-toggle="pill" aria-selected="true" role="tab">
                     <span class="nav-text text-gray-800 fw-bold fs-6 lh-1">${pokemon.Name}</span>
-                    <img src="${pokemon.Sprite}" id="pokemon-image-${pokemon.Id}" />
-                    <span class="bullet-custom position-relative  bottom-0 w-100 h-4px bg-primary "></span>
+                    <img src="${pokemon.Sprite}" id="pokemon-image-${pokemon.Id}" class="enlarge-image"/>
                 </a>
             `;
-          
-           
+
             const pokemonElement = document.createElement("div");
             pokemonElement.classList.add("content", "col-md-2", "text-center",  "p-3", "mb-5", "rounded");
             pokemonElement.innerHTML += htmlPkm;
+            const  imgElement = pokemonElement.querySelector('img');
+            imgElement.style.width = '100%';
+            imgElement.style.height = '100% !important';
             const pokemonLink = pokemonElement.querySelector(`#pokemon-${pokemon.Id}`);
     
             // Thêm sự kiện click cho mỗi Pokemon để hiển thị thông tin chi tiết
             pokemonLink.addEventListener("click", function () {
                 clearSelectedElements(); // Xóa lựa chọn trước đó
                 displayPokemonInfo(pokemon);
+             
                 this.classList.add("selected-element");
             });
-    
+
             pokemonList.appendChild(pokemonElement);
         });
     }
-    
 
     function clearSelectedElements() {
         const activeElements = document.querySelectorAll(".selected-element");
         activeElements.forEach(activeElement => {
             activeElement.classList.remove("selected-element");
         });
-
+        
         const activeSprites = document.querySelectorAll(".selected-pokemon");
         activeSprites.forEach(activeSprite => {
             activeSprite.classList.remove("selected-pokemon");
@@ -101,7 +102,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       
         movearray.forEach(moveName => {
             let htmlmoves= `<div class="card card-flush h-md-100 ">      
-         
             <div class="card-body p-0">
            
                 <div class="table-responsive ">
@@ -116,14 +116,11 @@ document.addEventListener("DOMContentLoaded", async function () {
                             </tr>
                         </tbody>
                     </table>
-                </div>
-              
+                </div>             
             </div>
         </div>`;
         moveList.insertAdjacentHTML('beforeend', htmlmoves);
         });
-       
-
 
         pokemonInfo.appendChild(sprite);
         pokemonInfo.appendChild(document.createElement("br"));

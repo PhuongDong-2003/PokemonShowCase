@@ -1,18 +1,23 @@
+body {
+  overflow-x: hidden;
+}
 
 #pokemonarray{
-  height: 1800px; /* Đặt kích thước của phần tử cha */
+  height:1700px; /* Đặt kích thước của phần tử cha */
   overflow: auto; /* Hiển thị thanh cuộn khi cần thiết */
 }
 #pokemon-info{
     float: right;
-    height: 100% !important;
+    height: 100% !important ;
+    overflow: initial;
   }
+
 .selected-pokemon {
     border: 2px solid blue; 
     border-radius: 5px; 
 }
 ul {
-  list-style-type: none;
+  list-style-type: none ;
   padding: 0;
 }
 .enlarge-image {
@@ -20,7 +25,7 @@ ul {
 }
 
 .enlarge-image:hover {
-  transform: scale(1.2); /* Phóng to ảnh khi hover */
+  transform: scale(1.5); 
 }
 #border{
   border: 2px solid rgb(94, 136, 158);
