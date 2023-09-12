@@ -25,7 +25,7 @@ ul {
 }
 
 .enlarge-image:hover {
-  transform: scale(1.5); 
+  transform: scale(1.4); 
 }
 #border{
   border: 2px solid rgb(94, 136, 158);
