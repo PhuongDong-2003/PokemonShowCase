@@ -45,6 +45,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         });
     }
 
+    const aLinks = document.querySelectorAll("ul li a");
+
+    aLinks.forEach(function (a) {
+        a.addEventListener("click", function () {
+            clearSelectedPokemons();
+        });
+    });
+
     function clearSelectedElements() {
         const activeElements = document.querySelectorAll(".selected-element");
         activeElements.forEach(activeElement => {
@@ -55,6 +63,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         activeSprites.forEach(activeSprite => {
             activeSprite.classList.remove("selected-pokemon");
         });
+    }
+
+    function clearSelectedPokemons() {
+        const activeElements = document.getElementById("pokemon-info");
+            activeElements.innerHTML = '';
+      
     }
 
     async function displayPokemonInfo(pokemon) {
@@ -70,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         sprite.src = pokemon.Sprite;
         sprite.classList.add("img-fluid");
         sprite.style.maxWidth  = "100% !important";
-        sprite.style.height = "7%";
+        sprite.style.height = "50%";
 
         const name = document.createElement("span");
         name.textContent = `Name: ${pokemon.Name}`;
@@ -97,28 +111,13 @@ document.addEventListener("DOMContentLoaded", async function () {
         const moveList = document.createElement("div");
         moveList.style.maxHeight = "150px"; // Đặt chiều cao tối đa cho khung cuộn
         moveList.style.overflowY = "auto"; // Bật thanh cuộn khi danh sách dài
-        moveList.style.marginLeft = "35%";
+        moveList.style.marginLeft = "22%";
         moveList.style.marginTop = "5px"
       
         movearray.forEach(moveName => {
-            let htmlmoves= `<div class="card card-flush h-md-100 ">      
-            <div class="card-body p-0">
-           
-                <div class="table-responsive ">
-             
-                    <table class="table table-row-dashed align-middle gs-0 my-0">
-                        <tbody>
-                            <tr>
-                                <td class="ps-0 ml-200px">
-                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6  pe-0 d-flex align-items-center justify-content-center">${moveName}</a>
-                                </td>
-                              
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>             
-            </div>
-        </div>`;
+            let htmlmoves= `<div class="flex-column flex-lg-row-auto w-100 ml-0 ">      
+                    <p>${moveName}</p>
+                    </div>`;
         moveList.insertAdjacentHTML('beforeend', htmlmoves);
         });
 
