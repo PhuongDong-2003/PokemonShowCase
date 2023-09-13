@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         const sprite = document.createElement("img");
         sprite.src = pokemon.Sprite;
         sprite.classList.add("img-fluid");
-        sprite.style.width = "100%";
-        sprite.style.height = "15%";
+        sprite.style.maxWidth  = "100% !important";
+        sprite.style.height = "7%";
 
         const name = document.createElement("span");
         name.textContent = `Name: ${pokemon.Name}`;

@@ -11,89 +11,85 @@
     <link rel="stylesheet" href="style.css">
     <title>Pokemon</title>
 </head>
-<body>
-  
-    <div class="">
+<body class=" bg-white">
 
-        <div class="text-center bg-secondary bg-lighten-xl">
-            <img src="img/header-lg.avif" class="rounded" alt="...">
-        </div>
-        <div id="border" style="border: 1px solid  rgb(94, 164, 202); border-radius: 5px;">
+    <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+        <div id="kt_app_content" class="app-content flex-column-fluid ">
+            <div id="kt_app_content_container" class="app-container container-fluid">
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column flex-xl-row ">
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="flex-lg-row-fluid  mb-20 mb-xl-0">
+                                        <div class="mb-0">
+                                            
+                                            <div class="card mb-12">
+                                                <div class=" row card-body  p-5 ">
+                                                    <div class="card-rounded bg-light d-flex flex-stack flex-wrap p-5">
+                                                        <ul class="nav flex-wrap border-transparent fw-bold d-flex justify-content-between">
+                                                            <li class="nav-item my-1 mx-4 d-flex">
+                                                                <a class="nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link  px-lg-3 mx-1 text-uppercase" href="#">Gen 1</a>
+                                                            </li>
+                                                            <li class="nav-item my-1 mx-4 d-flex">
+                                                                <a class=" nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link  px-lg-3 mx-1 text-uppercase" href="#">Gen 2</a>
+                                                            </li>
+                                                            <li class="nav-item my-1 mx-4 d-flex">
+                                                                <a class=" nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link  px-lg-3 mx-1 text-uppercase" href="#">Gen 3</a>
+                                                            </li>
+                                                            <li class="nav-item my-1 mx-4 d-flex">
+                                                                <a class="nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link  px-lg-3 mx-1 text-uppercase" href="#">Gen 4</a>
+                                                            </li>
+                                                            <li class="nav-item my-1 mx-4 d-flex">
+                                                                <a class="nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link  px-lg-3 mx-1 text-uppercase" href="#">Gen 5</a>
+                                                            </li> 
+                                                            <li class="nav-item my-1 mx-4 d-flex">
+                                                                <a class="nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link  px-lg-3 mx-1 text-uppercase" href="#">Gen 6</a>
+                                                            </li> 
+                                                            <li class="nav-item my-1 mx-4 d-flex">
+                                                                <a class=" nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link  px-lg-3 mx-1 text-uppercase" href="#">Gen 7</a>
+                                                            </li> 
+                                                            <li class="nav-item my-1 mx-4 d-flex">
+                                                                <a class="nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link  px-lg-3 mx-1 text-uppercase" href="#">Gen 8</a>
+                                                            </li> 
+                                                            <li class="nav-item my-1 mx-4 d-flex">
+                                                                <a class=" nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link  px-lg-3 mx-1 text-uppercase" href="#">Gen 9</a>
+                                                            </li> 
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mb-10">
+                                                <div class="mb-10">
+                                                    <div class="d-flex flex-column">
+                                                        <div class="row card-round d-flex"  id="pokemon-list">
+                                                            <div class="card-rounded flex-column p-5">
+                                                            
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-        <div class="card-rounded bg-light d-flex flex-stack flex-wrap p-5">
-            <!--begin::Nav-->
-            <ul class="nav flex-wrap border-transparent fw-bold">
-                <!--begin::Nav item-->
-                <li class="nav-item my-1">
-                    <a class=" nav-link btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase active">Gen 1</a>
-                </li>
-                <!--end::Nav item-->
-                <!--begin::Nav item-->
-                <li class="nav-item my-1">
-                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase">Gen 2</a>
-                </li>
-                <!--end::Nav item-->
-                <!--begin::Nav item-->
-                <li class="nav-item my-1">
-                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 3</a>
-                </li>
-                <!--end::Nav item-->
-                <!--begin::Nav item-->
-                <li class="nav-item my-1">
-                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 4</a>
-                </li>
-                <!--end::Nav item-->
-                <!--begin::Nav item-->
-                <li class="nav-item my-1">
-                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 5</a>
-                </li>
-                <!--end::Nav item-->
-                <!--begin::Nav item-->
-                <li class="nav-item my-1">
-                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 6</a>
-                </li>
-                <!--end::Nav item-->
-                                <!--end::Nav item-->
-                <!--begin::Nav item-->
-                <li class="nav-item my-1">
-                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 7</a>
-                </li>
-                <!--end::Nav item-->
-                                <!--end::Nav item-->
-                <!--begin::Nav item-->
-                <li class="nav-item my-1">
-                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 8</a>
-                </li>
-                <!--end::Nav item-->
-                                <!--end::Nav item-->
-                <!--begin::Nav item-->
-                <li class="nav-item my-1">
-                    <a class="btn btn-color-gray-600 btn-active-secondary btn-active-color-primary fw-bolder fs-8 fs-lg-base nav-link px-3 px-lg-8 mx-1 text-uppercase" href="#">Gen 9</a>
-                </li>
-                <!--end::Nav item-->
-        </div>
-        <div class="row">
-            <div class="left col-sm-8 bg-brown bg-lighten-xl " id="pokemonarray">
-                <div class=" row body d-flex  d-flex justify-content-around" id="pokemon-list">
+                                <div class="col-3">
+                                
+                                        <div class="bg-opacity-5" id="pokemon-info">
+                                        </div>
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
                 </div>
-
+                
             </div>
-
-            <div class="col-sm-4 d-flex justify-content-start" id="pokemondisplay">
-
-                <div id="pokemon-info">
-
-                </div>
-                <hr>
-
-            </div>
-
         </div>
-        </div>
-
     </div>
-    
 
     <script src="pokemon.js"></script>
     <script src="assets/js/scripts.bundle.js"></script>

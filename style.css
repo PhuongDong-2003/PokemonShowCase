@@ -3,7 +3,7 @@ body {
 }
 
 #pokemonarray{
-  height:1700px; /* Đặt kích thước của phần tử cha */
+  height:500px; /* Đặt kích thước của phần tử cha */
   overflow: auto; /* Hiển thị thanh cuộn khi cần thiết */
 }
 #pokemon-info{
